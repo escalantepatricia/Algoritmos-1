@@ -1,0 +1,29 @@
+// Primer progama.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include "iostream"
+
+using namespace std;
+
+int main ()
+{int N,s,i,t;
+cout<<"Introducir N ";
+cin>>N;
+	while(N>0)
+{
+s=0;
+t=1;
+   for(i=1;i<=N;i++)
+{		s=s+t;
+		t=t+2;
+		
+}
+cout<<"La suma es" << s;
+cin>>N;
+}
+getch();
+	return 0;
+}
+
