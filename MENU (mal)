@@ -1,0 +1,84 @@
+Algoritmos-1
+============
+// Menu.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include "iostream"
+using namespace std;
+
+void op1(int N);
+void op2(int N);
+void op3(int N);
+void menu();
+
+int main()
+{int op,N;
+ cout<< "Ingrese N";
+ cin>>N;
+ do
+	{menu();
+	cout<<"Ingrese el numero de opcion: ";
+	cin>> op;
+			
+switch(op)
+	{case 1:op1(N);
+			break;
+	 case 2:op2(N);
+			break;
+	 case 3:op3(N);
+			break;
+    }
+	}while (op!=4);
+
+	return 0;
+}
+
+void op1(int N);
+{int s,i,t;
+s=0;
+t=1;
+i=1;
+while(i<=N)
+{	s=s+t;
+	t=t+2;
+	i++;
+}
+cout<<"La suma es" << s;
+getch();
+}
+
+void op2 (int N);
+{int s,i;
+s=0;
+for(i=1;i<=N;i++)
+if(i%2!=0)
+s=s+i;
+cout<<"La suma es" << s;
+getch();
+}
+
+void op3 (int N);
+int main ()
+{int N,s,i,t;
+while(N>0)
+{
+s=0;
+t=1;
+for(i=1;i<=N;i++)
+{ s=s+t;
+t=t+2;
+}
+cout<<"La suma es" << s;
+cin>>N;
+}
+getch();
+}
+
+void menu();
+{
+	cout<<"1. suma de los N primeros numeros";
+	cout<<"2. Suma de la serie";
+	cout<<"3. Calcular la ser";
+}
