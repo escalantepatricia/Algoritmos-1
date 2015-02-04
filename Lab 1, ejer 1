@@ -1,0 +1,38 @@
+Enter file contents here
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+
+void secuenciaFibo (int n);
+
+ 
+
+int main()
+{ 
+  int n;
+  do
+  {
+	 cout<<"Ingrese hasta el numero: ";
+	 cin>>n;
+	}while(n<4);
+	 secuenciaFibo(n);
+	 getch();
+	 return 0;
+}
+void secuenciaFibo(int n)
+
+{int a=-1,b=1,c=0,res,i=0;
+
+ while(i<n)
+
+       {res=a+b+c;
+		a=b;
+        b=c;
+        c=res;
+        cout<<res<<"\t";
+        i++;
+
+       }
+}
